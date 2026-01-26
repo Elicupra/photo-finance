@@ -4,7 +4,7 @@ import { ReviewInvoiceComponent } from './component/review-invoice.component/rev
 import { UploadInvoiceComponent } from './component/upload-invoice.component/upload-invoice.component';
 
 export const routes: Routes = [
+    {path:'', component:UploadInvoiceComponent},
     {path:'summary', component: SummaryScreenComponent},
-    {path: 'review', component: ReviewInvoiceComponent},
-    {path:'upload-invoice', component:UploadInvoiceComponent}
+    {path: 'review', component: ReviewInvoiceComponent}
 ];
