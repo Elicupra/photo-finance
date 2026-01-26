@@ -1,59 +1,66 @@
-# PhotoFinance
+# Proyecto Photo-Finance
+_Con una sola foto puedes llevar las finanzas de tu hogar._
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
+Proyecto en construcción para llegar a fase de MVP, enfocado en ayudar a personas no expertas en finanzas y sin tiempo a llevar las finanzas del hogar con solo hacer una foto.
 
-## Development server
+El primer objetivo es conocer la utilidad real en personas reales, para poder determinar la viabilidad del proyecto.
 
-To start a local development server, run:
+La finalidad principal del proyecto es seguir creciendo en el conocimiento de herramientas de desarrollo como Angular y Python.
 
-```bash
-ng serve
-```
+## Definición del proyecto
+Proyecto de app web donde se pretende crear una funcionalidad para que el usuario envíe una factura al sistema, este la lea, la analice y la clasifique en categorías dentro del libro mayor de su hogar.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Estado
+Fase previa al desarrollo, definiendo arquitectura y funcionalidades básicas para lograr un MVP fiable y representativo de la idea final de la app.
 
-## Code scaffolding
+El MVP no estará integrado con bancos y no hará contabilidad fiscal.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Entregará un reporte de las facturas enviadas por el usuario y permitirá corregir posibles errores en la interpretación de las facturas enviadas mediante fotos, para después integrarlas en un resumen mensual.
 
-```bash
-ng generate component component-name
-```
+## Stack y arquitectura
+_Frontend:_ Angular para seguir creciendo en el conocimiento de uno de los frameworks más utilizados y demandados.  
+_Backend:_ Python por ser ideal para la integración con IA que ayudará a leer las facturas y clasificarlas en categorías de gasto.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Levantar proyecto
+Proyecto no ejecutable todavía.
 
-```bash
-ng generate --help
-```
+## Roadmap
+*En desarrollo...*  
+Enfocado a MVP.
 
-## Building
+## Colaboración
+Aceptamos feedback e ideas que puedan aportar valor al proyecto.  
+Actualmente no estamos abiertos a recibir PR.
 
-To build the project run:
+## Licencia
+*En proceso de decisión*
 
-```bash
-ng build
-```
+<!--
+Un README no es marketing, es comunicación técnica clara.
+El cartel de la obra (explicar qué se está construyendo y por qué)
+1. ¿Qué es el proyecyo?
+  - Qué problema resuelve.
+  - Para quién es.
+  - 3 - 4 Líneas.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+2. Estado del proyecto:
+  - Qué sí hace qué no y por qué
+  -MVP / En desarrollo / Experiemental...
 
-## Running unit tests
+3. Stack y arquitectura
+ - Frontend
+ - Backend (qué y por qué)
+ - Cualquier decisión no obvia.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+4. Como levantar el proyecto
+ No es un tutorial, solo lo básico y necesario.
 
-```bash
-ng test
-```
+5. Roadmap corto:
+  - 3-6 puntos máximos
+  - Ordenados
+  - Como foco en MVP
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+6. Contribución y licencia:
+  - ¿Aceptas PR?
+  - Todos los derechos reservados
+-->
