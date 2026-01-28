@@ -1,6 +1,27 @@
-<section class="flex">
-    <form action="" method="" class="m-auto">
-        <input type="file" class="">
-        <button class="bg-indigo-400 px-3 py-1.5 cursor-pointer" type="submit">Enviar factura</button>
+<article>
+    <header>
+        <h1 class="my-5 text-4xl font-bold">Subir factura</h1>
+    </header>
+    <form>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="photoUrl">Subir</label>
+            <input type="file" id="photoUrl" accept="image/*,application/pdf" (change)="onFileChange($event)">
+        </div>
+        <button class="bg-red-300 hover:bg-red-400 cursor-pointer" type="button" (click)="save()">Subir avatar</button>
     </form>
-</section>
+
+    <div class="">
+        @if(invoicePreview) {
+        <h3 class="my-5">Previsualización de factura</h3>
+
+        @if (invoiceFile?.type == 'image/jpeg' || invoiceFile?.type == 'image/png') {
+        <img class="size-50" [src]="invoicePreview">
+        }<!-- @else if (invoiceFile?.type == 'application/pdf') {
+        <object [data]="invoicePreview" type="application/pdf" style="width:100%; height:600px;">
+            <embed [src]="invoicePreview" type="application/pdf" />
+        </object>
+        } -->
+        <p class="text-2xl">📄 {{ invoiceFile?.name }}</p>
+        }
+    </div>
+</article>
