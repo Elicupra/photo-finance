@@ -1,0 +1,490 @@
+{
+  "fecha": "2026-02-17T16:02:22.732052",
+  "pdfs": [
+    {
+      "archivo": "Naturgy_01_25.pdf",
+      "tests": [
+        {
+          "nombre": "Inicialización del Extractor",
+          "pdf": "Naturgy_01_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ PDF cargado correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "reader_valido": true,
+            "pdf_path_correcto": true
+          }
+        },
+        {
+          "nombre": "Extracción de Metadatos",
+          "pdf": "Naturgy_01_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Metadatos extraídos: 3 campos",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_claves_requeridas": true,
+            "titulo": null,
+            "autor": null,
+            "fecha_creacion": null
+          }
+        },
+        {
+          "nombre": "Número de Páginas",
+          "pdf": "Naturgy_01_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ PDF contiene 6 páginas",
+          "excepciones": [],
+          "validaciones": {
+            "es_int": true,
+            "mayor_que_cero": true,
+            "cantidad": 6
+          }
+        },
+        {
+          "nombre": "Extracción de Texto - Primera Página",
+          "pdf": "Naturgy_01_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Texto extraído: 0 caracteres",
+          "excepciones": [],
+          "validaciones": {
+            "es_string": true,
+            "no_vacio": false,
+            "longitud_caracteres": 0,
+            "primer_100_chars": ""
+          }
+        },
+        {
+          "nombre": "Extracción de Todas las Páginas",
+          "pdf": "Naturgy_01_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ 6 páginas extraídas correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "es_lista": true,
+            "cantidad_paginas": 6,
+            "tiene_estructura": true,
+            "numeracion_correcta": true
+          }
+        },
+        {
+          "nombre": "Extracción Completa del Documento",
+          "pdf": "Naturgy_01_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Documento completo extraído: 6 páginas",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_todas_claves": true,
+            "tipos_correctos": {
+              "nombre_archivo": true,
+              "ruta_archivo": true,
+              "num_paginas": true,
+              "paginas": true
+            }
+          }
+        },
+        {
+          "nombre": "Función Auxiliar extract_pdf",
+          "pdf": "Naturgy_01_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Función auxiliar funcionó correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_estructura": true,
+            "nombre_correcto": true
+          }
+        }
+      ]
+    },
+    {
+      "archivo": "Naturgy_01_26.pdf",
+      "tests": [
+        {
+          "nombre": "Inicialización del Extractor",
+          "pdf": "Naturgy_01_26.pdf",
+          "estado": "PASS",
+          "detalles": "✓ PDF cargado correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "reader_valido": true,
+            "pdf_path_correcto": true
+          }
+        },
+        {
+          "nombre": "Extracción de Metadatos",
+          "pdf": "Naturgy_01_26.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Metadatos extraídos: 3 campos",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_claves_requeridas": true,
+            "titulo": null,
+            "autor": null,
+            "fecha_creacion": null
+          }
+        },
+        {
+          "nombre": "Número de Páginas",
+          "pdf": "Naturgy_01_26.pdf",
+          "estado": "PASS",
+          "detalles": "✓ PDF contiene 4 páginas",
+          "excepciones": [],
+          "validaciones": {
+            "es_int": true,
+            "mayor_que_cero": true,
+            "cantidad": 4
+          }
+        },
+        {
+          "nombre": "Extracción de Texto - Primera Página",
+          "pdf": "Naturgy_01_26.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Texto extraído: 0 caracteres",
+          "excepciones": [],
+          "validaciones": {
+            "es_string": true,
+            "no_vacio": false,
+            "longitud_caracteres": 0,
+            "primer_100_chars": ""
+          }
+        },
+        {
+          "nombre": "Extracción de Todas las Páginas",
+          "pdf": "Naturgy_01_26.pdf",
+          "estado": "PASS",
+          "detalles": "✓ 4 páginas extraídas correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "es_lista": true,
+            "cantidad_paginas": 4,
+            "tiene_estructura": true,
+            "numeracion_correcta": true
+          }
+        },
+        {
+          "nombre": "Extracción Completa del Documento",
+          "pdf": "Naturgy_01_26.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Documento completo extraído: 4 páginas",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_todas_claves": true,
+            "tipos_correctos": {
+              "nombre_archivo": true,
+              "ruta_archivo": true,
+              "num_paginas": true,
+              "paginas": true
+            }
+          }
+        },
+        {
+          "nombre": "Función Auxiliar extract_pdf",
+          "pdf": "Naturgy_01_26.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Función auxiliar funcionó correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_estructura": true,
+            "nombre_correcto": true
+          }
+        }
+      ]
+    },
+    {
+      "archivo": "Naturgy_02_25.pdf",
+      "tests": [
+        {
+          "nombre": "Inicialización del Extractor",
+          "pdf": "Naturgy_02_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ PDF cargado correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "reader_valido": true,
+            "pdf_path_correcto": true
+          }
+        },
+        {
+          "nombre": "Extracción de Metadatos",
+          "pdf": "Naturgy_02_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Metadatos extraídos: 3 campos",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_claves_requeridas": true,
+            "titulo": null,
+            "autor": null,
+            "fecha_creacion": null
+          }
+        },
+        {
+          "nombre": "Número de Páginas",
+          "pdf": "Naturgy_02_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ PDF contiene 4 páginas",
+          "excepciones": [],
+          "validaciones": {
+            "es_int": true,
+            "mayor_que_cero": true,
+            "cantidad": 4
+          }
+        },
+        {
+          "nombre": "Extracción de Texto - Primera Página",
+          "pdf": "Naturgy_02_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Texto extraído: 0 caracteres",
+          "excepciones": [],
+          "validaciones": {
+            "es_string": true,
+            "no_vacio": false,
+            "longitud_caracteres": 0,
+            "primer_100_chars": ""
+          }
+        },
+        {
+          "nombre": "Extracción de Todas las Páginas",
+          "pdf": "Naturgy_02_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ 4 páginas extraídas correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "es_lista": true,
+            "cantidad_paginas": 4,
+            "tiene_estructura": true,
+            "numeracion_correcta": true
+          }
+        },
+        {
+          "nombre": "Extracción Completa del Documento",
+          "pdf": "Naturgy_02_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Documento completo extraído: 4 páginas",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_todas_claves": true,
+            "tipos_correctos": {
+              "nombre_archivo": true,
+              "ruta_archivo": true,
+              "num_paginas": true,
+              "paginas": true
+            }
+          }
+        },
+        {
+          "nombre": "Función Auxiliar extract_pdf",
+          "pdf": "Naturgy_02_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Función auxiliar funcionó correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_estructura": true,
+            "nombre_correcto": true
+          }
+        }
+      ]
+    },
+    {
+      "archivo": "Naturgy_03_25.pdf",
+      "tests": [
+        {
+          "nombre": "Inicialización del Extractor",
+          "pdf": "Naturgy_03_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ PDF cargado correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "reader_valido": true,
+            "pdf_path_correcto": true
+          }
+        },
+        {
+          "nombre": "Extracción de Metadatos",
+          "pdf": "Naturgy_03_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Metadatos extraídos: 3 campos",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_claves_requeridas": true,
+            "titulo": null,
+            "autor": null,
+            "fecha_creacion": null
+          }
+        },
+        {
+          "nombre": "Número de Páginas",
+          "pdf": "Naturgy_03_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ PDF contiene 4 páginas",
+          "excepciones": [],
+          "validaciones": {
+            "es_int": true,
+            "mayor_que_cero": true,
+            "cantidad": 4
+          }
+        },
+        {
+          "nombre": "Extracción de Texto - Primera Página",
+          "pdf": "Naturgy_03_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Texto extraído: 0 caracteres",
+          "excepciones": [],
+          "validaciones": {
+            "es_string": true,
+            "no_vacio": false,
+            "longitud_caracteres": 0,
+            "primer_100_chars": ""
+          }
+        },
+        {
+          "nombre": "Extracción de Todas las Páginas",
+          "pdf": "Naturgy_03_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ 4 páginas extraídas correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "es_lista": true,
+            "cantidad_paginas": 4,
+            "tiene_estructura": true,
+            "numeracion_correcta": true
+          }
+        },
+        {
+          "nombre": "Extracción Completa del Documento",
+          "pdf": "Naturgy_03_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Documento completo extraído: 4 páginas",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_todas_claves": true,
+            "tipos_correctos": {
+              "nombre_archivo": true,
+              "ruta_archivo": true,
+              "num_paginas": true,
+              "paginas": true
+            }
+          }
+        },
+        {
+          "nombre": "Función Auxiliar extract_pdf",
+          "pdf": "Naturgy_03_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Función auxiliar funcionó correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_estructura": true,
+            "nombre_correcto": true
+          }
+        }
+      ]
+    },
+    {
+      "archivo": "Naturgy_04_25.pdf",
+      "tests": [
+        {
+          "nombre": "Inicialización del Extractor",
+          "pdf": "Naturgy_04_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ PDF cargado correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "reader_valido": true,
+            "pdf_path_correcto": true
+          }
+        },
+        {
+          "nombre": "Extracción de Metadatos",
+          "pdf": "Naturgy_04_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Metadatos extraídos: 3 campos",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_claves_requeridas": true,
+            "titulo": null,
+            "autor": null,
+            "fecha_creacion": null
+          }
+        },
+        {
+          "nombre": "Número de Páginas",
+          "pdf": "Naturgy_04_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ PDF contiene 4 páginas",
+          "excepciones": [],
+          "validaciones": {
+            "es_int": true,
+            "mayor_que_cero": true,
+            "cantidad": 4
+          }
+        },
+        {
+          "nombre": "Extracción de Texto - Primera Página",
+          "pdf": "Naturgy_04_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Texto extraído: 0 caracteres",
+          "excepciones": [],
+          "validaciones": {
+            "es_string": true,
+            "no_vacio": false,
+            "longitud_caracteres": 0,
+            "primer_100_chars": ""
+          }
+        },
+        {
+          "nombre": "Extracción de Todas las Páginas",
+          "pdf": "Naturgy_04_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ 4 páginas extraídas correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "es_lista": true,
+            "cantidad_paginas": 4,
+            "tiene_estructura": true,
+            "numeracion_correcta": true
+          }
+        },
+        {
+          "nombre": "Extracción Completa del Documento",
+          "pdf": "Naturgy_04_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Documento completo extraído: 4 páginas",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_todas_claves": true,
+            "tipos_correctos": {
+              "nombre_archivo": true,
+              "ruta_archivo": true,
+              "num_paginas": true,
+              "paginas": true
+            }
+          }
+        },
+        {
+          "nombre": "Función Auxiliar extract_pdf",
+          "pdf": "Naturgy_04_25.pdf",
+          "estado": "PASS",
+          "detalles": "✓ Función auxiliar funcionó correctamente",
+          "excepciones": [],
+          "validaciones": {
+            "es_dict": true,
+            "tiene_estructura": true,
+            "nombre_correcto": true
+          }
+        }
+      ]
+    }
+  ]
+}
