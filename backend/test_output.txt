@@ -1,0 +1,350 @@
+﻿python.exe : Neither CUDA nor MPS are available - defaulting to CPU. Note: This 
+module is much faster with a GPU.
+En línea: 1 Carácter: 100
++ ... e\backend"; & "D:\GitHub\photo-finance\.venv\Scripts\python.exe" "tes ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Neither CUDA no...ter with a GPU.:St 
+   ring) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+D:\GitHub\photo-finance\.venv\Lib\site-packages\torch\utils\data\dataloader.py:775
+: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, 
+then device pinned memory won't be used.
+  super().__init__(loader)
+Extracting text from PDF: container_pdf\Naturgy_01_25.pdf
+
+--- Pßgina 1 ---
+Naturgy
+ELISEO MARIA ORTIGOSA GUERRERO
+CAPULINO JAUREGUI 6
+7 3
+29002 Mßlaga
+Mejoramos tu experiencia
+con Naturgy
+Esta es tu
+primera factura de Naturgy Clientes. Como ves, la hemos mejorado
+para que sea a·n mßs fßcil de entender. Y este cambio tambiÚn viene
+acompa±ado de otra mejora: nuestra nueva plataforma digital. Esto significa que
+ahora desde tu ┴rea Clientes; en www.naturgy es/hogar /ayuda/tu_area_clientes;
+puedes hacer cualquier gesti¾n de forma inmediata y conocer hasta el ·ltimo
+detalle de tu energÝa. Te hemos preparado un vÝdeo donde te contamos todas
+las novedades.
+Para verlo; solo tienes que escanear el siguiente c¾digo QR:
+Tu contrato de energÝa ya ha sido cedido a Naturgy Clientes; S.AU, que ahora es el responsable del tratamiento de tus
+datos personales; los cuales seguirßn siendo destinados a las mismas finalidades que hasta ahora; incluyendo
+principalmente la gesti¾n de la relaci¾n contractual. Tienes derecho a acceder y rectificar tus datos; asÝ como el resto de
+derechos establecidos en el RGPD. Mßs informaci¾n en www.naturgy es/legal/nc_politica_privacidad_naturgy_clientes:
+--- Pßgina 2 ---
+
+--- Pßgina 3 ---
+Naturgy Clientes, S.AU.
+Estßs en mercado libre.
+Naturgy
+Hola,
+aquÝ tienes tu factura de
+electricidad.
+ELISEO MARIA ORTIGOSA GUERRERO
+CAPULINO JAUREGUI 6
+7 3
+29002 Mßlaga
+Direcci¾n de suministro: CAPULINO
+JAUREGUI 6
+7 3 29002
+Mßlaga
+N.% de factura: FE25390001464005
+Fecha de emisi¾n: 20/01/25
+Fecha estimada de cargo: 27/01/25
+PerÝodo electricidad:
+del 14/12/24 al 13/01/25
+N." de referencia: 2002811372
+Tu Factura
+Tu consumo
+Consumo punta real
+Consumo punta estimado
+Consumo llano real
+Consumo llano estimado
+Total a pagar
+Consumo valle real
+Consumo valle estimado
+62,24 Ç
+600
+450
+{
+300
+150
+Electricidad
+51,44 Ç
+~
+8 8 8
+8 8
+Q ?
+R 8 8 &
+~
+~ & & & & & &
+~ ~ #
+Ü g g ; õ ; ! =
+8
+8
+8 ; Ü g g ; õ ; { = & &
+8u :
+IVA
+10,80 Ç
+1. Tus datos de facturaci¾n
+Nombre:
+ELISEO MARIA ORTIGOSA GUERRERO
+Entidad:
+ING BANK N.V. SUCURSAL EN
+Doc. Identidad:
+76640419A
+ESPANA
+Datos bancarios:
+IBAN ES** 1465
+**** **** ****
+****
+Direcci¾n fiscal:
+CAPULINO JAUREGUI 6 7 3 29002
+Esta factura serß cargada en cuenta
+siguiendo el mandato
+000002470067 de fecha 15/12/24.
+2. Tus Canales de Contacto
+Web
+Atenci¾n al cliente Y reclamaciones
+Otros contactos de interÚs
+areaclientes naturgy es
+699 000 699
+900 385 425
+AverÝas elÚctricas
+900 878 119
+APP Naturgy Clientes
+naturgyclientes@naturgy com
+@Plaþa del Gas, 2.08003 Barcelona
+En el caso de no estar de acuerdo con la resoluci¾n aportada;
+de no haber recibido respuesta pasados 30 dÝas, los consumidores y
+usuarios pueden acudir a la Junta Arbitral Nacional de Consumo 0 a la de su Comunidad Aut¾noma como mecanismo para la
+resoluci¾n alternativa de litigios. Para mayor informaci¾n sobre el arbitraje y su procedimiento: telÚfono 900385425 0 699000699
+Y https:/ /www consumo gob.es/es/consumo/sistema-arbitral-consumo.
+;
+Naturgy Clientes; 5. A. U. Domicilio Social: Avenida de AmÚrica; 38,28028 Madrid. Inscrita en el Registro Mercantil de Madrid; Tomo 42585, Folio 66 con hoja
+M-753327, Inscripci¾n 1a. NIF A 67760876
+Mßlaga
+--- Pßgina 4 ---
+3. Detalle: c¾mo calculamos tu factura
+Concepto
+Cßlculo
+Importe
+PerÝodo electricidad del 14/12/24al 13/01/25
+Tarifa Plana Luz
+1 mes
+x 51,44 Ç/mes
+51,44 Ç
+Tarifa Plana Luz
+Contrato:
+Total electricidad
+51,44 Ç
+3004682499
+31 dÝas
+Total base imponible
+51,44 Ç
+IVA (21%)
+51,44 Ç
+x 21%
+10,80 Ç
+Total a pagar
+62,24 Ç
+fecha 20/01/25 el consumo acumulado de electricidad desde el dÝa 14/11/24 es de 299 kWh. Te recordamos que el consumo
+mßximo anual pactado de su Tarifa Plana Luz es de 3.907 kWh.
+4. Tus ·ltimas lecturas y tus ·ltimos consumos
+Fecha
+Tipo de lectura
+Lectura
+Consumo
+facturar
+13/01/25
+Punta calculada
+kWh
+14/12/24
+Punta real
+13/01/25
+Llano calculada
+kWh
+14/12/24
+Llano real
+13/01/25
+Valle calculada
+kWh
+14/12/24
+Valle real
+Total consumo
+kWh
+Puedes consultar tu consumo horario en el portal web de tu distribuidora (https:/ /zonaprivada edistribucion.com/areaprivada/s/)
+Si deseas informaci¾n detallada sobre tu/s contrato/s e hist¾rico de consumo; llama al telÚfono de atenci¾n al cliente.
+5
+Tus datos de suministro
+C¾digo CUPS:
+ES0031102853796037LROF
+Potencia contratada Pl: 3,450 kW
+Distribuidora:
+EDISTRIBUCIËNREDES DIGITALES SLU
+Potencia contratada P2: 3,450 kW
+Segmento de cargos:
+Peaje de transporte y
+CuantÝa de peajes:
+6,80 Ç
+distribuci¾n:
+2.OTD
+CuantÝa de cargos:
+1,06 Ç
+Fecha final de contrato:
+13/11/25
+Los precios de peajes de acceso publicados en el BOE de fecha 16/12/24 y los precios de cargos publicados en el BOE de fecha 28/12/24. Los
+precios de los peajes; cargos y otros costes regulados serßn objeto de revisi¾n seg·n las modificaciones que experimenten.
+CuantÝa de peajes Y cargos: es el precio que la
+compa±Ýa comercializadora Naturgy debe pagar a la compa±Ýa distribuidora correspondiente para
+darte acceso a su red. El Real Decreto 1164/01 de 26 de octubre establece el tipo de peaje que se aplica a la energÝa elÚctrica.
+ÚQuieres realizar
+Solo tienes que entrar en tu ┴rea Clientes en www naturgy es/login.
+Podrßs:
+tus
+gestiones
+Actualizar tus datos_
+fßcilmente?
+Activar tu factura online y mucho mßs
+--- Pßgina 5 ---
+Naturgy
+6. Destino del importe de tu factura de electricidad
+EnergÝa: importe correspondiente a la energÝa consumida.
+1,67%
+22,21%
+Impuestos: incluye el IVA y elimpuesto de electricidad. En el caso de que no hayas consumido
+electricidad, no pagas este impuesto.
+Alquiler contador:
+es el importe que cobra tu
+compa±Ýa distribuidora por el alquiler del contador cuando
+21,29%
+este es de su
+propiedad.
+8,24%
+Peajes de transporte y distribuci¾n: son los importes
+regulados que nos traslada tu compa±Ýa
+distribuidora por el acceso a las redes
+de
+transporte y distribuci¾n por las cuales se vehicula la energÝa que
+consumes
+Cargos:
+Recore (13,06%): incluye incentivos para renovables; la cogeneraci¾n y los residuos.
+DÚficit (63,92%): es la cobertura del dÚficit de a±os anteriores.
+TNP (22,36%): corresponde a la compensaci¾n del sobrecoste de la generaci¾n de la energÝa en
+46,599
+territorios no peninsulares
+Otros (0,66%)
+Porcentajes calculados para un consumo medio
+Origen
+Naturgy
+Mix generaci¾n
+Naturgy Clientes, S.AU.
+Clientes, S.AU.
+nacional
+Renovable
+1009
+50,809
+100%
+C÷generõcion de
+7. Origen de la
+Alta Eficiencia
+2,609
+electricidad de tu
+CC Gas Natural
+18,309
+Carb¾n
+1,509
+zozercializadora
+'Rueiraas
+20,20%
+0
+÷tras no
+renovables
+4,709
+Si quieres mßs informaci¾n sobre el origen de tu electricidad entra en https:/ /gdo.cnmc.es/
+Emisiones de CO
+Residuos radioactivos alta
+equivalente
+actividad
+8. Impacto ambiental de
+Naturgy Clientes, S.AU.
+Naturgy Clientes, S.AU.
+tu comercializadora
+2023
+La letra 'A' corresponde al mÝnimo
+impacto ambiental, la 'D' a la media de
+generaci¾n nacional y la 'G
+al mßximo
+impacto ambiental
+Emisiones COzeq (g/kWh)
+Residuos radioactivos (Hg/kWh)
+Media nacional (g/kWh)
+121
+Media nacional (Hg/kWh)
+512
+9. Otra informaci¾n de interÚs
+Sislenle
+{Quieres mßs informaci¾n sobre c¾mo mejorar tu eficiencia energÚtica?
+Grstio
+150 9001:2015
+50 14001.2015
+50 45001.2018
+ÚQuieres conocer y comparar tu consumo con el de otros perfiles?
+T┌VRhelnland
+Ceatficado
+Ytuy Com
+9007028523
+iTe interesa saber mßs sobre las caracterÝsticas tÚcnicas de tus
+electrodomÚsticos?
+Puedes consultar:
+IDAE Instituto para la Diversificaci¾n
+Ahorro de la EnergÝa:
+Www.idae es
+c/ Madera, 8
+28004 Madrid:
+CNMC: www.cnmc es
+Sede Alcalß: Alcalß 47 (28014 Madrid).
+En el
+c¾digo QR
+haciendo click en el
+siguiente enlace
+(comparador cnmc gob es) se pueden consultar y
+comparar las distintas ofertas vigentes de las
+comercializadoras de energÝa elÚctrica.
+--- Pßgina 6 ---
+10. Glosario
+N·mero de referencia: Es el
+c¾digo identificativo de tu contrato. Nuestros canales de atenci¾n podrßn solicitßrtelo al
+solicitar alguna gesti¾n:
+No de contrato de acceso: Es el n·mero de contrato de acceso a las redes de la empresa distribuidora para disponer del
+suministro.
+IVA: ElIVA
+aplicar del 21%. Sin embargo el Gobierno podrß aplicar rebajas fiscales que deriven en IVA reducido para las
+energÝas
+Periodos electricidad (Colores histograma consumos):
+Color Azul: el horario punta que va de las 10 de la ma±ana
+a las 2 de la tarde y de las 6 de la tarde a las 10 de la noche
+Y tiene el precio de la energÝa mßs caro.
+Color Naranja: el llano; que va de las 8 de la ma±ana
+a las 10, de las 2 de la tarde a las 6 y de las 10 de la noche
+a las
+12 Y tiene un precio intermedio_
+Color Verde: El valle; va desde las 12 de la noche hasta las 8 de la ma±ana los dÝas laborables y los sßbados; domingos
+Y festivos nacionales y tiene el precio mßs barato. Ten presente que en las Ciudades Aut¾nomas de Ceuta y Melilla
+todos los horarios se trasladan una hora hacia adelante
+TÚrminos de potencia:
+Potencia Pl: se refiere a la energÝa necesaria para el funcionamiento de los electrodomÚsticos bßsicos, Ya que coincide
+con el
+perÝodo punta y llano.
+Potencia P2: coincide con el horario valle Y, por tanto; se utiliza para los electrodomÚsticos de mayor consumo; como
+el horno 0 el aire acondicionado.
+Si estßs recibiendo tu factura en papel y
+quieres pasar al formato digital; activa el servicio gratuito de Factura online en tu
+┴rea Cliente 0 App Naturgy Clientes.
+C¾digo CUPS: es el
+·nico de punto de suministro que identifica de manera unÝvoca cada punto de suministro y el
+tipo de energÝa que se suministrarß a travÚs de Úl, sea cual sea el proveedor de energÝa.
+c¾digo
