@@ -203,3 +203,42 @@ El siguiente paso mas razonable es este:
 ## Siguiente Paso Sugerido
 
 Cuando quieras continuar, el siguiente entregable util seria definir una tabla SQLite minima y una funcion Python corta que lea esos patrones y devuelva la categoria principal detectada.
+
+## TODO - Siguiente Mejora (Productos No Catalogados)
+
+### Objetivo
+
+Si durante la lectura OCR aparece un producto o termino relevante que no exista en los patrones guardados en SQLite, debe detectarse como no catalogado.
+
+### Comportamiento Esperado
+
+1. Comparar texto OCR contra los patrones actuales de SQLite.
+2. Si hay terminos candidatos no reconocidos, marcarlos como pendientes de revision.
+3. Emitir notificacion en consola para dos perfiles:
+    - Admin: detalle tecnico del termino detectado y contexto.
+    - Usuario: mensaje simple indicando que se encontro un concepto no clasificado.
+
+### Salida Minima en Consola (simplificada)
+
+```text
+[ADMIN] Nuevo termino no catalogado detectado: "xxxx"
+[ADMIN] Contexto OCR: "...fragmento de texto..."
+[USUARIO] Hemos detectado un concepto no clasificado. Se revisara para mejorar la clasificacion.
+```
+
+### TODO Interno
+
+Evaluar la posibilidad de alta en SQLite desde el modulo Python, pero siempre bajo flujo revisado.
+
+### Reglas de Seguridad para Alta en SQLite
+
+- No insertar automaticamente en produccion.
+- Guardar propuesta de alta como pendiente.
+- Requerir revision previa antes de confirmar insercion.
+- Registrar fecha, termino y origen del OCR para auditoria.
+
+### Propuesta de Implementacion Gradual
+
+1. Fase 1: deteccion y log en consola.
+2. Fase 2: guardar propuestas pendientes en una tabla de revision.
+3. Fase 3: herramienta de aprobacion para insertar en tabla de patrones.
