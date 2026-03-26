@@ -22,7 +22,7 @@ if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
 #dotenv.load_dotenv()
-pdf_file = "Naturgy_01_26.pdf"
+pdf_file = "DGFC2514370141.pdf"
 pdf_folder = "container_pdf"
 pdf_path = os.path.join(pdf_folder, pdf_file)
  # Cambia esto al código de idioma que necesites (por ejemplo, 'en' para inglés)
@@ -63,13 +63,36 @@ def parse_invoice_debt(text: str):
     """
     Procesa el texto extraído para identificar conceptos e importes.
     """
-    match = re.search(
-        r'TOTAL\s*A\s*PAGAR\s*:?\s*([0-9]{1,4}(?:[.,]\s?[0-9]{2})?)\s*€?',
-        text,
-        re.IGNORECASE
-    )
-    if match:
-        return float(match.group(1).replace(' ', '').replace(',', '.'))
+    patrones = [
+        r'TOTAL\s+A\s+PAGAR\s*:?\s*([0-9][0-9\.,]{0,10})\s*€?',
+        r'IMPORTE\s+TOTAL\s*:?\s*([0-9][0-9\.,]{0,10})\s*€?',
+        r'TOTAL\s+SERVICIOS\s*:?\s*([0-9][0-9\.,]{0,10})\s*€?',
+    ]
+
+    for patron in patrones:
+        match = re.search(patron, text, re.IGNORECASE)
+        if not match:
+            continue
+
+        raw_amount = re.sub(r'\s+', '', match.group(1))
+        if not raw_amount:
+            continue
+
+        # Normaliza separadores de miles/decimales para tolerar OCR variable.
+        if ',' in raw_amount and '.' in raw_amount:
+            if raw_amount.rfind(',') > raw_amount.rfind('.'):
+                normalized = raw_amount.replace('.', '').replace(',', '.')
+            else:
+                normalized = raw_amount.replace(',', '')
+        elif ',' in raw_amount:
+            normalized = raw_amount.replace('.', '').replace(',', '.')
+        else:
+            normalized = raw_amount.replace(',', '')
+
+        try:
+            return float(normalized)
+        except ValueError:
+            continue
 
     return None
 
@@ -167,7 +190,12 @@ if __name__ == "__main__":
     fecha_vencimiento = parse_invoice_debt_date(texto)
     asunto = parse_invoice_subject(texto)
     concepto = find_concepts_keys(texto)
-    print(f"\nTotal a pagar: {factura:.2f}€")
+
+    if factura is not None:
+        print(f"\nTotal a pagar: {factura:.2f}€")
+    else:
+        print("\nTotal a pagar: No se pudo extraer")
+
     print(f"Fecha de vencimiento: {fecha_vencimiento}")
     print(f"Asunto/Concepto: {asunto}")
     print(f"Concepto clave identificado: {concepto}")

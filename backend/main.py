@@ -18,7 +18,9 @@ CORS_ORIGINS = ["http://localhost:3000"]
 app = FastAPI(title="PDF Reader Backend")
 
 # Configuración de CORS
-from fastapi.middleware.cors import CORSMiddlewareapp.add_middleware(
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
     CORSMiddleware,
     allow_origins=CORS_ORIGINS,
     allow_credentials=True,
@@ -53,5 +55,6 @@ async def process_pdf(file: UploadFile = File(...)):
         return {"error": str(e)}
     
 # Endpoint para devolver a Frontend el texto extraído
-@app.get("/show-text/")
-def show_text():
+#@app.get("/show-text/")
+#def show_text():
+#
