@@ -22,7 +22,7 @@ if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
 #dotenv.load_dotenv()
-pdf_file = "DGFC2514370141.pdf"
+pdf_file = "Naturgy_08_25.pdf"
 pdf_folder = "container_pdf"
 pdf_path = os.path.join(pdf_folder, pdf_file)
  # Cambia esto al código de idioma que necesites (por ejemplo, 'en' para inglés)
