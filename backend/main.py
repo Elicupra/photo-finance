@@ -8,7 +8,7 @@ import requests
 import os
 import dotenv
 import base64
-from extract_pdf import extract_pdf
+from backend.components.extract_pdf import extract_pdf
 from utils import text_to_json
 
 from fastapi import FastAPI, UploadFile, File 
