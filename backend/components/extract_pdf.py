@@ -1,5 +1,6 @@
 # extract_pdf.py -- Funciones para extraer texto de PDFs usando OCR (Tesseract o EasyOCR)
 # Entrada de la ruta de pdf, salida de texto extraído
+# basado en español y facturas del modelo español
 
 import easyocr
 import pytesseract
