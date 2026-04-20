@@ -8,7 +8,7 @@ import requests
 import os
 import dotenv
 import base64
-from backend.components.extract_pdf import extract_pdf
+from backend.components.extract_pdf import extract_pdf, text_to_json, parse_pdf_text
 from utils import text_to_json
 
 from fastapi import FastAPI, UploadFile, File 
@@ -53,8 +53,21 @@ async def process_pdf(file: UploadFile = File(...)):
         return {"extracted_text": extracted_text}
     except Exception as e:
         return {"error": str(e)}
-    
-# Endpoint para devolver a Frontend el texto extraído
-#@app.get("/show-text/")
-#def show_text():
-#
+
+# Endpoint para procesar texto extraído y devolver datos estructurados
+@app.post("/process-text/")
+async def process_text(text: str):
+    try:
+        cleaned_text = parse_pdf_text.limpiar_texto(text)
+        concept = parse_pdf_text.parse_invoice_debt(cleaned_text)
+        debt = parse_pdf_text.parse_invoice_debt(cleaned_text)
+        type_invoice = parse_pdf_text.find_invoice_type(cleaned_text)
+        # Convertir a JSON estructurado
+        json_data = text_to_json(cleaned_text, concept, debt, type_invoice)
+        
+        return {"status": "success", "structured_data": json_data}
+    except Exception as e:
+        return {"error": str(e)}
+
+#TODO: Agregar más endpoints según sea necesario, por ejemplo, para guardar datos en la base de datos, listar PDFs procesados, etc.
+# Endpoint para guardar la informacion del PDF procesado en la base de datos (simulado aquí)
