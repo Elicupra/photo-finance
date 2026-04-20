@@ -1,46 +1,52 @@
-# Validacion actual del pipeline PDF
+# Validacion unificada del pipeline PDF
 
-## Alcance
-
-Se ha creado una suite dedicada en `backend/tests/test_pdf_pipeline_validation.py` para validar el flujo actual del backend sin usar `backend/test.py`.
+Fecha de ejecucion: 2026-04-20
 
 Comando ejecutado:
 
 ```powershell
-d:/GitHub/photo-finance/.venv/Scripts/python.exe -m pytest backend/tests/test_pdf_pipeline_validation.py -vv
+d:/GitHub/photo-finance/.venv/Scripts/python.exe -m pytest backend/tests/test_pdf_pipeline_validation.py -v
 ```
 
-Resultado de la ejecucion:
+Resultado global:
 
-- `6 passed`
-- `4 warnings` de dependencias `easyocr/torch`
-- Tiempo aproximado: `6.59s`
+- Total: 8 tests
+- OK: 7
+- KO: 1
+- Warnings: 10
+- Duracion: 190.09s
 
-## Pruebas realizadas
+## Detalle de validaciones
 
-| Caso | Estado | Validacion realizada | Resultado real |
-| --- | --- | --- | --- |
-| Encontrar PDF | OK | Se comprueba la existencia de `backend/container_pdf/Naturgy_01_25.pdf` | El fichero existe y tiene extension `.pdf` |
-| Lectura de PDF | OK | Se abre el fichero en binario y se valida la cabecera `%PDF` | El PDF se puede leer desde disco correctamente |
-| Extraccion de datos segun el codigo actual | KO | Se ejecuta `backend.components.extract_pdf.extract_pdf(..., use_tesseract=False)` sobre un PDF real | Falla con `ValueError: Invalid input type. Supporting format = string(file path or url), bytes, numpy array` porque se pasan imagenes PIL directamente a `easyocr.Reader.readtext()` |
-| Parsing estructurado disponible hoy | OK | Se valida `limpiar_texto`, `parse_invoice_debt` y `find_concepts_keys` con texto representativo | El parser actual extrae `123.45` y detecta `electricidad` |
-| Devolucion del PDF por backend | KO | Se intenta importar `backend.main` para poder probar el endpoint `/process-pdf/` | No se puede probar el endpoint porque `backend.main` falla al importar con `ImportError: cannot import name 'text_to_json' from 'backend.components.extract_pdf'` |
-| Estructuracion JSON final | KO | Se valida `backend.components.text_to_json.text_to_json()` | La clave `tipo_factura` devuelve el builtin `type` en lugar del valor recibido |
+| Caso validado | Estado | Evidencia |
+| --- | --- | --- |
+| Encontrar PDF de prueba (`Naturgy_01_25.pdf`) | OK | `test_find_pdf_file` pasa |
+| Lectura binaria del PDF y cabecera `%PDF` | OK | `test_read_pdf_file_from_disk` pasa |
+| Extraccion de datos estructurados del texto (helpers actuales) | OK | `test_extract_structured_data_from_text_with_current_helpers` pasa |
+| OCR con EasyOCR | OK | `test_extract_pdf_with_easyocr_works_after_fix` pasa |
+| OCR con Tesseract OCR | OK | `test_extract_pdf_with_tesseract_ocr_works` pasa |
+| Comprobacion de import del backend | OK (como validacion de fallo esperado) | `test_backend_main_currently_fails_to_import` pasa esperando `ModuleNotFoundError: No module named 'components'` |
+| Validacion de `text_to_json` segun codigo actual | OK (como validacion de bug actual) | `test_text_to_json_currently_returns_builtin_type_instead_of_invoice_type` pasa, confirma que `tipo_factura` devuelve `type` |
+| Lectura PDF y volcado a TXT | KO | `test_extract_pdf_and_save_to_txt` falla con `FileNotFoundError` en `D:\GitHub\photo-finance\tests\prueba_raw.txt` |
+
+## KO detectados y causa
+
+### 1) KO en prueba de guardado TXT
+
+- Caso: `test_extract_pdf_and_save_to_txt`
+- Error: `FileNotFoundError: [Errno 2] No such file or directory: 'D:\\GitHub\\photo-finance\\tests\\prueba_raw.txt'`
+- Causa: la carpeta destino `tests` en raiz no existe en el momento de la prueba.
+
+### 2) Problematica actual del endpoint
+
+Aunque el test de import se marca OK (porque valida el fallo esperado), funcionalmente el endpoint sigue KO por estos motivos:
+
+- `backend/main.py` usa `from components.extract_pdf ...`, lo que provoca `ModuleNotFoundError` al importar desde la raiz del repo.
+- En `/process-pdf/`, la firma `file: UploadFile = pdf_path` no es una definicion valida para un archivo subido en FastAPI.
+- En `/process-pdf/`, se usa ruta temporal fija `/tmp/...`, no portable en Windows.
+- En `/process-text/`, se llama `parse_pdf_text.find_invoice_type(...)`, funcion que no existe en `parse_pdf_text.py`.
+- En `/process-text/`, se invoca `text_to_json(cleaned_text, concept, debt, type_invoice)` con numero de argumentos incompatible con la firma actual de `text_to_json`.
 
 ## Conclusion
 
-El estado actual del backend permite:
-
-- localizar PDFs reales de prueba
-- leer el fichero PDF desde disco
-- ejecutar correctamente parte del parser textual
-
-El estado actual del backend no permite completar el flujo extremo a extremo de OCR y respuesta FastAPI por estos motivos:
-
-1. `extract_pdf()` rompe al invocar EasyOCR con un tipo de dato no soportado.
-2. `backend.main` no importa correctamente, por lo que el endpoint `/process-pdf/` no puede probarse de forma real.
-3. `text_to_json()` no devuelve el `type_invoice` recibido.
-
-## Nota sobre la suite
-
-La suite pasa porque valida el comportamiento observable actual, incluyendo los fallos esperados (`KO`) para dejar evidencia reproducible del estado del sistema a fecha de esta ejecucion.
+La validacion actual confirma que el OCR (EasyOCR y Tesseract), lectura de PDF y parsing base funcionan. El flujo endpoint completo todavia no esta operativo y queda bloqueado por errores de importacion y de contrato entre funciones.

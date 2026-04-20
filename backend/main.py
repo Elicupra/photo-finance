@@ -7,9 +7,9 @@ import easyocr
 import requests
 import os
 import dotenv
+import sys
 import base64
-from backend.components.extract_pdf import extract_pdf, text_to_json, parse_pdf_text
-from utils import text_to_json
+from components.extract_pdf import extract_pdf, text_to_json, parse_pdf_text
 
 from fastapi import FastAPI, UploadFile, File 
 
@@ -28,12 +28,28 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+### PRUEBA PDF
+# Force UTF-8 output on Windows
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
+
+#dotenv.load_dotenv()
+pdf_file = "Naturgy_08_25.pdf"
+pdf_folder = "container_pdf"
+pdf_path = os.path.join(pdf_folder, pdf_file)
+ # Cambia esto al código de idioma que necesites (por ejemplo, 'en' para inglés)
+###
+
+
+
 # Configuración de EasyOCR
 reader = easyocr.Reader(['es', 'en'])
 
 # Endpoint para procesar PDF
 @app.post("/process-pdf/")
-async def process_pdf(file: UploadFile = File(...)):
+# Endpoint que lee la ruta del pdf y devuelve el texto extraído
+async def process_pdf(file: UploadFile = pdf_path):
     # Guardar el archivo PDF temporalmente
     try:
         contents = await file.read()
@@ -42,7 +58,7 @@ async def process_pdf(file: UploadFile = File(...)):
             f.write(contents)
         
         # Extraer texto del PDF
-        extracted_text = extract_pdf(temp_path)
+        extracted_text = extract_pdf(temp_path, lenguaje='es', use_tesseract=True)
         
         # Guardar el PDF procesado en la base de datos (simulado aquí)
         # Aquí podrías agregar lógica para guardar el PDF y el texto extraído en tu base de datos
@@ -56,7 +72,7 @@ async def process_pdf(file: UploadFile = File(...)):
 
 # Endpoint para procesar texto extraído y devolver datos estructurados
 @app.post("/process-text/")
-async def process_text(text: str):
+async def process_text(extracted_text: str):
     try:
         cleaned_text = parse_pdf_text.limpiar_texto(text)
         concept = parse_pdf_text.parse_invoice_debt(cleaned_text)
